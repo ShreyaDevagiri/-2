@@ -1,0 +1,17 @@
+<h2>Welcome to Course Registration</h2>
+<h3>Enter your Details</h3>
+<div>
+    <input #name type="text" placeholder="Enter Your Name" required><br><br>
+    <input #usn type="text" placeholder="Enter Your USN" required><br><br>
+    <input #div type="text" placeholder="Enter Your Division" required><br><br>
+    <input #dept type="text" placeholder="Enter Your Department" required><br><br>
+    <input #eve type="text" placeholder="Enter Course Name" required><br><br>
+    <button (click)="EveRegister(name,usn,div,dept,eve)">Register</button>
+</div>
+<div *ngIf="!isdone, else elseblock">
+    <p></p>
+</div>
+<ng-template #elseblock>
+    <p>Register done successfully</p>
+    <p>{{na | titlecase }} You are successfully registered for the Course {{c}}</p>
+</ng-template>

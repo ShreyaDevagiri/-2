@@ -1,0 +1,18 @@
+<table class="w-100">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Credits</th>
+            <th>Courses</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container>
+            <tr *ngFor="let eve of courses">
+                <td>{{eve.Name}}</td>
+                <td>{{eve.Credits}}</td>
+                <td>{{eve.Courses}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>    

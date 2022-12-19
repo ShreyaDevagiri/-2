@@ -1,0 +1,18 @@
+<h2>Welcome to Course Registration</h2>
+<h3>Enter your credentials</h3>
+<div>
+    <form>
+        <label><b>Username</b></label><br>
+        <input #name type="text" placeholder="Enter your User name" required><br><br>
+        <label><b>Password</b></label><br>
+        <input #pass type="password" placeholder="Enter your password" required><br><br>
+        <button (click)="Login(name,pass)">Submit</button>
+    </form>
+</div>
+
+<div *ngIf="!isdone else elseblock">
+    <p></p>
+</div>
+<ng-template #elseblock>
+    <p>Login Done Successfully</p>
+</ng-template>

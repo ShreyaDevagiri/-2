@@ -1,0 +1,70 @@
+<h3>LIST OF BRANCHES</h3>
+<select (change)="SetDropDownValue($event)">
+  <option value="">Select</option>
+  <option value="CS">COMPUTER SCIENCE</option>
+  <option value="EC">ELECTRONINC AND COMMUNICATION</option>
+  <option value="ME">MECHANICAL ENGINEER</option>
+</select>
+<div [ngSwitch] = 'dropDownValue'>
+    <div *ngSwitchCase="'CS'">
+      <table class="w-100">
+          <thead>
+              <tr>
+                  <th>Course</th>
+                  <th>Credits</th>
+                  <th>Register Option</th>
+              </tr>
+          </thead>
+          <tbody>
+          <ng-container>
+            <tr *ngFor="let eve of eve">
+              <td>{{eve.Name}}</td>
+              <td>{{eve.Credits}}</td>
+              <td><button (click)="register()">Register</button></td>
+            </tr>
+          </ng-container>
+          </tbody>
+      </table>
+      </div>
+      <div *ngSwitchCase="'EC'">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Course</th>
+                      <th>Credits</th>
+                      <th>Register Option</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <ng-container>
+                <tr *ngFor="let eve of eve1">
+                  <td>{{eve.Name}}</td>
+                  <td>{{eve.Credits}}</td>
+                  <td><button (click)="register()">Register</button></td>
+                </tr>
+              </ng-container>
+              </tbody>
+          </table>
+        </div>
+        <div *ngSwitchCase="'ME'">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Course</th>
+                      <th>Credits</th>
+                      <th>Register Option</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <ng-container>
+                <tr *ngFor="let eve of eve2">
+                  <td>{{eve.Name}}</td>
+                  <td>{{eve.Credits}}</td>
+                  <td><button (click)="register()">Register</button></td>
+                </tr>
+              </ng-container>
+              </tbody>
+          </table>
+        </div>
+    <div *ngSwitchDefault="">You have not selected any branch</div>
+  </div>

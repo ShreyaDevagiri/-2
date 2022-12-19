@@ -1,0 +1,67 @@
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+
+}
+th, td {
+    border: 1px solid;
+  }
+.w-100 {
+    width: 100%;
+   }
+   
+.div-top{
+    margin-bottom: 30px;
+}
+.div-bottom{
+    margin-top: 25px;
+}
+.div-left{
+    margin-right: 30px;
+}
+.div-right{
+    margin-left: 25px;
+}
+option{
+    padding: auto;
+    margin: 5px;
+}
+.row{
+    display: table-row;
+    border-bottom: 1px solid black;
+}
+button {
+    background-color: green;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 4px;
+}
+
+h3,
+h2 {
+    font-family: sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.ADD {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+input {
+    width: 500px;
+    height: 10px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 400;
+    font-family: sans-serif;
+}
